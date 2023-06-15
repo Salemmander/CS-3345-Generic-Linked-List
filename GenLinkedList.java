@@ -4,9 +4,6 @@ import java.util.NoSuchElementException;
 	
 public class GenLinkedList<T> {
 
-
-	
-		
 		private Node<T> head;
 		private Node<T> tail;
 		int size = 0;
@@ -241,7 +238,6 @@ public class GenLinkedList<T> {
 			}
 		}
 		
-		
 		private static class Node<T>{
 			Node(T d, Node<T> n){
 				data = d;
@@ -257,79 +253,82 @@ public class GenLinkedList<T> {
 
 	public static void main(String[] args) {
 		GenLinkedList<Integer> list = new GenLinkedList<>();
-		
+		list.addFront(0);
+		System.out.println("Starting list: " + list);
+
 		// show addEnd
 		list.addEnd(1);
-		System.out.println(list);// all the print statements show toString
+		System.out.println("Add End: " + list);// all the print statements show toString
 		// show addFront
 		list.addFront(2);
-		System.out.println(list);
+		System.out.println("Add Front: " + list);
 		
 		// showing removeEnd
 		list.removeEnd();
-		System.out.println(list);
+		System.out.println("Remove End: " + list);
+		list.removeFront();
+		System.out.println("Remove Front: " + list);
 		list.removeEnd();
-		System.out.println(list);
-		
+		line();
+
 		for (int i = 0; i < 10; i++)
 			list.addEnd(i);
-		System.out.println(list);
+		System.out.println("New Starting List: " + list);
 		
-		for(int k = 0; k < 10; k++) {/// showing removeFront
-			list.removeFront();
-			System.out.println(list);
-		}
+
 		// showing set
-		list.addEnd(1);
-		System.out.println(list);
 		list.set(60, 0);
-		System.out.println(list);
+		System.out.println("Set: " + list);
 		
 		//showing get
-		System.out.println(list.get(0));
+		System.out.println("Get: " + list.get(0));
 		
 		//showing swap
-		list.addEnd(24);
-		System.out.println(list);
 		list.swap(0,1);
-		System.out.println(list);
+		System.out.println("Swap: " + list);
 		
+		line();
+
 		//clearing and adding 0-9 to list
-		list.removeEnd();
-		for (int g=0; g<10;g++) {
-			list.addEnd(g);
-		}
-		
+		list.removeFront();
+		list.removeFront();
+		list.addFront(1);
+		System.out.println("New Starting List: " + list);
 		//showing shift
-		System.out.println(list);
 		list.shift(5);
-		System.out.println(list);
+		System.out.println("Shift: " + list);
 		list.shift(-5);
-		System.out.println(list);
-		
-		//new list
-		
-		GenLinkedList<Integer> list2 = new GenLinkedList<>();
+		System.out.println("Shift: "  + list);	
+
+		line();
 
 		// showing remove matching
 		for(int h = 0; h < 10; h++) {
-			list2.addEnd(h);
-			list2.addEnd(5);
+			list.removeFront();
+			list.addEnd(5);
+			list.addEnd(h);
 		}
-		System.out.println(list2);
-		list2.removeMatching(5);
-		System.out.println(list2);
+		System.out.println("New Starting List: " + list);
+
+		list.removeMatching(5);
+		System.out.println("Remove Matching: " + list);
 		
 		// showing erase
-		list2.erase(0, 5);
-		System.out.println(list2);
+		list.erase(0, 5);
+		System.out.println("Erase: " + list);
 		
 		//showing insertList
 		ArrayList<Integer> arr = new ArrayList<>();
 		for(int f = 0; f<10;f++) {
 			arr.add(f);
 		}
-		list2.insertList(arr, 0);
-		System.out.println(list2);
+		System.out.println("List to Insert: " + arr);
+		list.insertList(arr, 0);
+		System.out.println("Insert List: " + list);
+	}
+
+	public static void line(){
+		System.out.println("___________________________________");
+		System.out.println("");
 	}
 }
