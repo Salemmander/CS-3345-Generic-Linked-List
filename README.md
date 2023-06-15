@@ -9,8 +9,9 @@
 5. Use the following command to run: java GenLinkedList
 
 ### Expected Output
-Starting list: [ 0 ].
-Add End: [ 0 1 ]
+Starting list: [ 0 ]  
+Add End: [ 0 1 ]  
+
 Add Front: [ 2 0 1 ]
 Remove End: [ 2 0 ]
 Remove Front: [ 0 ]
