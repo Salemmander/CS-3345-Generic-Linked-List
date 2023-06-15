@@ -4,8 +4,8 @@
 
 This is my implementation of a singly linked list with no sentinal nodes.  
 
-Included methods are:
-addFront(T d) - Adds item d to the front of the list  
+Included methods are:  
+**addFront(T d)** - Adds item d to the front of the list  
 addEnd(T d) - adds item d to the end of the list  
 removeFront() - removes the item at the front of the list  
 removeEnd() - removes the item at the end of the list  
