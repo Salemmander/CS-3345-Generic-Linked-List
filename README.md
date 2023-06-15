@@ -2,7 +2,7 @@
 
 ### Description
 
-This is my implementation of a singly linked list with no sentinal nodes.  
+This is my implementation of a singly linked list with no sentinel nodes.  
 
 Included methods are:  
 
