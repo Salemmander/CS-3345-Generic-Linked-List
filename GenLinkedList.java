@@ -189,7 +189,7 @@ public class GenLinkedList<T> {
 			}
 		}
 		
-		public void erase(int index, int num) {
+		public void erase(int index, int x) {
 			if (head == null) {
 				throw new IllegalStateException("List is empty");
 			}
@@ -202,9 +202,9 @@ public class GenLinkedList<T> {
 				if (index > size - 1)
 					throw new ArrayIndexOutOfBoundsException("Index is beyond bounds of the list.");
 				
-				if((size-index) >= num && (index + num) <= size) {
+				if((size-index) >= x && (index + x) <= size) {
 					if(index == 0) {
-						for (int k = 1;k <= num;k++) {
+						for (int k = 1;k <= x;k++) {
 							head = head.next;
 						}
 					}
@@ -212,7 +212,7 @@ public class GenLinkedList<T> {
 						for (int i = 0; i < index - 1; i++) {
 							curr = curr.next;
 						}
-						for (int k = 1;k <= num;k++) {
+						for (int k = 1;k <= x;k++) {
 							curr.next = curr.next.next;
 						}
 					}
