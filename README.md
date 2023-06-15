@@ -5,18 +5,19 @@
 This is my implementation of a singly linked list with no sentinal nodes.  
 
 Included methods are:  
+
 **addFront(T d)** - Adds item d to the front of the list  
-addEnd(T d) - adds item d to the end of the list  
-removeFront() - removes the item at the front of the list  
-removeEnd() - removes the item at the end of the list  
-toString() - returns the list represented as a string  
-set(T d, int i) - sets the value of the item at index i to d  
-get(int i) - returns the value at index i  
-swap(int i, int j) - swaps the items at indexs i and j  
-shift(int i) - shifts the list i places to the right; If negative it will shift left.  
-removeMatching(T d) - removes all instances of d from the list  
-erase(int index, int x) - removes x number of items starting from the given index   
-insertList(List<T> list, int index) - inserts the given list item into the list at the given index  
+**addEnd(T d)** - adds item d to the end of the list  
+**removeFront()** - removes the item at the front of the list  
+**removeEnd()** - removes the item at the end of the list  
+**toString()** - returns the list represented as a string  
+**set(T d, int i)** - sets the value of the item at index i to d  
+**get(int i)** - returns the value at index i  
+**swap(int i, int j)** - swaps the items at indexs i and j  
+**shift(int i)** - shifts the list i places to the right; If negative it will shift left.  
+**removeMatching(T d)** - removes all instances of d from the list  
+**erase(int index, int x)** - removes x number of items starting from the given index   
+**insertList(List<T> list, int index)** - inserts the given list item into the list at the given index  
 
 ### How to Use
 
